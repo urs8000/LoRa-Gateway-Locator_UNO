@@ -26,31 +26,19 @@ Dragino board Version 1.3 with RFM95W (marked as RFM96!) LoRaWan compatible radi
 all of them are made on the Adafruit GPS shield (see picture Mod_1)
 
 1. cut at the TOP side the traces Tx, Rx & CCS
-
 2. connect CCS -> 8, Tx -> 5, Rx -> 4
-
 3. in the software use in the definitions
 ```
     #define SD_Select      8
-
     #define Drag_Select   10
-
     SoftwareSerial mySerial(5, 4);  // switch in position SW serial!
-
     Adafruit_GPS GPS(&mySerial);
-
    // Pin mapping  for Dragino Board Version 1.3
-
     const lmic_pinmap lmic_pins = {
-
     .nss = 10,
-
     .rxtx = LMIC_UNUSED_PIN,
-
     .rst = 9,
-
     .dio = {2, 6, 7},
-
     };
 ```
 
