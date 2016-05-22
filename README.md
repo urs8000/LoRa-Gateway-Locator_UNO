@@ -57,16 +57,13 @@ all of them are made on the Adafruit GPS shield (see picture Mod_1)
 in setup() you have to configure the two different ChipSelect
 ```
     pinMode(SD_Select, OUTPUT);       digitalWrite(SD_Select, HIGH);  // DEselect 
-
     pinMode(Drag_Select, OUTPUT);  digitalWrite(Drag_Select, HIGH);   // DEselect
 ```  
 
 when writing to the SD card make shure that the Dragino is disabled
 ```
     digitalWrite(Drag_Select, HIGH);       // disable Dragino_Board_ChipSelect
-
     log_on_SD();                           // write a log to the SDcard
-
     digitalWrite(SD_Select, HIGH);         // disable SDcard_ChipSelect
 ```  
   
