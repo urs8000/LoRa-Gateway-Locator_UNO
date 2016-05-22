@@ -31,34 +31,34 @@ all of them are made on the Adafruit GPS shield (see picture Mod_1)
 
 3. in the software use in the definitions
 
-   '#define SD_Select      8
+    '#define SD_Select      8
 
-   '#define Drag_Select   10
+    '#define Drag_Select   10
 
-   SoftwareSerial mySerial(5, 4);  // switch in position SW serial!
+    SoftwareSerial mySerial(5, 4);  // switch in position SW serial!
 
-   Adafruit_GPS GPS(&mySerial);
+    Adafruit_GPS GPS(&mySerial);
 
    // Pin mapping  for Dragino Board Version 1.3
 
-   const lmic_pinmap lmic_pins = {
+    const lmic_pinmap lmic_pins = {
 
-   .nss = 10,
+    .nss = 10,
 
-   .rxtx = LMIC_UNUSED_PIN,
+    .rxtx = LMIC_UNUSED_PIN,
 
-   .rst = 9,
+    .rst = 9,
 
-   .dio = {2, 6, 7},
+    .dio = {2, 6, 7},
 
-   };
+    };
 
 
 in setup() you have to configure the two different ChipSelect
 
-  pinMode(SD_Select, OUTPUT);       digitalWrite(SD_Select, HIGH);  // DEselect 
+    pinMode(SD_Select, OUTPUT);       digitalWrite(SD_Select, HIGH);  // DEselect 
 
-  pinMode(Drag_Select, OUTPUT);  digitalWrite(Drag_Select, HIGH);   // DEselect
+    pinMode(Drag_Select, OUTPUT);  digitalWrite(Drag_Select, HIGH);   // DEselect
   
 
 when writing to the SD card make shure that the Dragino is disabled
