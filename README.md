@@ -31,9 +31,9 @@ all of them are made on the Adafruit GPS shield (see picture Mod_1)
 
 3. in the software use in the definitions
 
-   #define SD_Select      8
+   '#define SD_Select      8
 
-   #define Drag_Select   10
+   '#define Drag_Select   10
 
    SoftwareSerial mySerial(5, 4);  // switch in position SW serial!
 
